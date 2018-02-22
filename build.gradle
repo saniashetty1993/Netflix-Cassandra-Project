@@ -1,0 +1,24 @@
+apply plugin: 'java-library'
+apply plugin: 'java'
+apply plugin: 'eclipse'
+apply plugin: 'application'
+
+repositories {
+     mavenCentral()	
+}
+
+dependencies {
+    // Use JUnit test framework
+    testImplementation 'junit:junit:4.12'
+    
+    compile group: 'com.datastax.cassandra', name: 'cassandra-driver-core', version: '3.3.0'
+}
+
+
+
+mainClassName = 'edu.tamu.nmp.Main'
+
+run{
+    standardInput = System.in
+}
+
